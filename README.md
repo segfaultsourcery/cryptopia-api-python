@@ -1,6 +1,5 @@
 # Cryptopia python API by CC Tech
-Originally made by The Bot Guy (thebotguy@protonmail.com)
-Ported to Python 3 by segfaultsourcery.
+Originally made by The Bot Guy (thebotguy@protonmail.com), ported to Python 3 by segfaultsourcery.
 
 ## Overview
 This wrapper provides a friendly way to call Cryptopia API from a Python 3 script. Requires requests.
