@@ -1,35 +1,28 @@
 # Cryptopia python API by CC Tech
-The Bot Guy (thebotguy@protonmail.com)
+Originally made by The Bot Guy (thebotguy@protonmail.com)
+Ported to Python 3 by segfaultsourcery.
 
 ## Overview
-This wrapper provides a friendly way to call Cryptopia API from a Python 2.7 script. Requires requests 2.8.1
+This wrapper provides a friendly way to call Cryptopia API from a Python 3 script. Requires requests.
 
 ## Usage
 Just import it and use it.
 ``` python
-from cryptopia_api import Api
+from cryptopia_api import Api, CryptopiaAPIException
 
 #later...
 api_wrapper = Api(MY_PUBLIC_KEY, MY_SECRET_KEY)
 
-#call a request to the api, like balance in BTC...
-balance, error = api_wrapper.get_balance('BTC')
-if error is not None:
-    #handle error
-    print 'ERROR: %s' % error
-else:
-    #ok
-    print 'Request successfull. Balance in BTC = %f' % balance
+try:
+    #call a request to the api, like balance in BTC...
+    print("Your balance:", api_wrapper.get_balance('BTC'))
+except CryptopiaAPIException as exception:
+    print("Error:", exception)
 ```
-
-Check cryptopia API docs for the parameters of each call: a more detailed wiki will be added here soon!
 
 # Donate
 Feel free to donate:
 
 | METHOD 	| ADDRESS                                   	|
 |--------	|--------------------------------------------	|
-| BTC    	| 1DVgmv6jkUiGrnuEv1swdGRyhQsZjX9MT3         	|
-| XVG    	| DFstPiWFXjX8UCyUCxfeVpk6JkgaLBSNvS         	|
-| ETH    	| 0x2fe7bd8a41e91e9284aada0055dbb15ecececf02 	|
-| USDT   	| 18obCEVmbT6MHXDcPoFwnUuCmkttLbK5Xo         	|
+| ETH    	| 0x8E511f7CCCEA6a70bb8B728191306F5d1b2a74C1 	|
