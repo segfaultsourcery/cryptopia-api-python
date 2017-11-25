@@ -1,7 +1,5 @@
 """ This is a wrapper for Cryptopia.co.nz API """
 
-# https://raw.githubusercontent.com/crypto-crew-tech/cryptopia-api-python/master/cryptopia_api.py
-
 import base64
 import hashlib
 import hmac
